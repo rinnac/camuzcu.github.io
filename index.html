@@ -1,12 +1,201 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>whats up gang</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Camuzcu Painting — Mont Albert North</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --charcoal:#20262B;
+    --cream:#F3EEE4;
+    --orange:#A6392C;
+    --slate:#5C6670;
+    --white:#FFFFFF;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--cream);
+    color:var(--charcoal);
+    line-height:1.5;
+  }
+  h1,h2,h3,.brand{
+    font-family:'Oswald',sans-serif;
+    font-weight:600;
+    letter-spacing:0.01em;
+  }
+  a{color:inherit;}
+  img,svg{max-width:100%;}
+
+  /* Header */
+  header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1.1rem 6vw;
+    background:var(--charcoal);
+    color:var(--cream);
+  }
+  .brand{font-size:1.15rem;color:var(--cream);}
+  .brand span{color:var(--orange);}
+  header a.callnow{
+    font-size:0.95rem;
+    border:1.5px solid var(--orange);
+    padding:0.5rem 1rem;
+    color:var(--cream);
+    text-decoration:none;
+  }
+  header a.callnow:hover{background:var(--orange);}
+
+  /* Hero */
+  .hero{
+    background:var(--charcoal);
+    color:var(--cream);
+    padding:4.5rem 6vw 5rem;
+  }
+  .hero h1{
+    font-size:clamp(2.3rem,6vw,4.2rem);
+    line-height:1.05;
+    max-width:14ch;
+  }
+  .hero p{
+    margin-top:1.1rem;
+    max-width:42ch;
+    color:#C9CDD1;
+    font-size:1.05rem;
+  }
+  .stroke{
+    width:180px;
+    height:18px;
+    margin:1.8rem 0;
+  }
+
+  /* Services */
+  .services{
+    padding:4rem 6vw;
+    max-width:900px;
+  }
+  .services h2{font-size:1.9rem;margin-bottom:1.8rem;}
+  .service-list{list-style:none;}
+  .service-list li{
+    display:flex;
+    align-items:baseline;
+    gap:1rem;
+    padding:1rem 0;
+    border-bottom:1px solid #DDD5C6;
+    font-size:1.1rem;
+  }
+  .service-list li:first-child{border-top:1px solid #DDD5C6;}
+  .service-list .mark{
+    color:var(--orange);
+    font-family:'Oswald',sans-serif;
+    font-size:0.95rem;
+    width:2.2rem;
+    flex-shrink:0;
+  }
+
+  /* About */
+  .about{
+    background:var(--white);
+    padding:4rem 6vw;
+    border-top:1px solid #DDD5C6;
+    border-bottom:1px solid #DDD5C6;
+  }
+  .about .wrap{max-width:640px;}
+  .about h2{font-size:1.9rem;margin-bottom:1.1rem;}
+  .about p{color:var(--slate);font-size:1.05rem;max-width:60ch;}
+
+  /* Contact strip */
+  .contact{
+    background:var(--charcoal);
+    color:var(--cream);
+    padding:3.5rem 6vw;
+  }
+  .contact h2{font-size:1.9rem;margin-bottom:1.8rem;color:var(--cream);}
+  .contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:2rem;
+  }
+  .contact-grid .label{
+    font-family:'Oswald',sans-serif;
+    font-size:0.85rem;
+    color:var(--orange);
+    margin-bottom:0.4rem;
+  }
+  .contact-grid a{text-decoration:none;font-size:1.15rem;}
+  .contact-grid a:hover{color:var(--orange);}
+  .contact-grid p{font-size:1.15rem;}
+
+  footer{
+    text-align:center;
+    padding:1.5rem;
+    font-size:0.85rem;
+    color:var(--slate);
+    background:var(--cream);
+  }
+
+  @media (max-width:520px){
+    header{padding:1rem 5vw;}
+    .hero,.services,.about,.contact{padding-left:5vw;padding-right:5vw;}
+  }
+</style>
 </head>
-  <body>
-    <h1>Yeah, I'm gonna take my horse to the old town road
-I'm gonna ride 'til I can't no more
-I'm gonna take my horse to the old town road
-I'm gonna ride 'til I can't no more</h1>
-  </body>
+<body>
+
+<header>
+  <div class="brand">CAMUZCU <span>PAINTING</span></div>
+  <a class="callnow" href="mailto:camuzcupainting@gmail.com">Get a quote</a>
+</header>
+
+<section class="hero">
+  <h1>House painting done properly, the first time.</h1>
+  <svg class="stroke" viewBox="0 0 180 18" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2 12 C 40 2, 80 16, 120 8 S 170 4, 178 10" stroke="#A6392C" stroke-width="6" fill="none" stroke-linecap="round"/>
+  </svg>
+  <p>Camuzcu Painting is a local painting business serving Mont Albert North and the surrounding suburbs. Straight quotes, tidy work, no shortcuts.</p>
+</section>
+
+<section class="services">
+  <h2>Services</h2>
+  <ul class="service-list">
+    <li><span class="mark">01</span> Interior house painting</li>
+    <li><span class="mark">02</span> Exterior house painting</li>
+    <li><span class="mark">03</span> Weatherboard & render prep</li>
+    <li><span class="mark">04</span> Feature walls & touch-ups</li>
+  </ul>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <p>Family-run and based in Mont Albert North, Camuzcu Painting takes on jobs of all sizes — from a single room to a full repaint. Every job gets proper prep, quality paint, and a clean finish.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Get in touch</h2>
+  <div class="contact-grid">
+    <div>
+      <div class="label">Email</div>
+      <a href="mailto:camuzcupainting@gmail.com">camuzcupainting@gmail.com</a>
+    </div>
+    <div>
+      <div class="label">Hours</div>
+      <p>8:30am – 4:00pm, Mon–Fri</p>
+    </div>
+    <div>
+      <div class="label">Area</div>
+      <p>Mont Albert North & surrounds</p>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Camuzcu Painting</footer>
+
+</body>
 </html>
